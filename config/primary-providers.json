@@ -1,0 +1,54 @@
+{
+  "openai": {
+    "label": "OpenAI",
+    "selector": {
+      "label": "OpenAI",
+      "detail": "Completions"
+    },
+    "icon": "🤖",
+    "hasBalance": false,
+    "apiStyle": "openai",
+    "defaultBase": "https://api.openai.com/v1",
+    "defaultModel": "gpt-4o-mini",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "openai_responses": {
+    "label": "OpenAI (Responses API)",
+    "selector": {
+      "label": "OpenAI",
+      "detail": "Responses"
+    },
+    "icon": "🔬",
+    "hasBalance": false,
+    "apiStyle": "openai_responses",
+    "defaultBase": "https://api.openai.com/v1",
+    "defaultModel": "gpt-5.6-luna",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "anthropic": {
+    "label": "Anthropic",
+    "selector": {
+      "label": "Anthropic",
+      "detail": "Messages"
+    },
+    "icon": "🔮",
+    "hasBalance": false,
+    "apiStyle": "anthropic",
+    "defaultBase": "https://api.anthropic.com/v1",
+    "defaultModel": "claude-sonnet-4-6",
+    "fetchModels": "fetchAnthropicModels"
+  },
+  "gemini": {
+    "label": "Google Gemini",
+    "selector": {
+      "label": "Gemini",
+      "detail": "Contents"
+    },
+    "icon": "✨",
+    "hasBalance": false,
+    "apiStyle": "gemini",
+    "defaultBase": "https://generativelanguage.googleapis.com",
+    "defaultModel": "gemini-3.1-flash-lite",
+    "fetchModels": "fetchGoogleModels"
+  }
+}

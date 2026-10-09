@@ -1,0 +1,55 @@
+# Cloudflare Wrangler 配置文件
+# @see https://developers.cloudflare.com/workers/wrangler/configuration/
+
+# 项目名称，通常与 package.json 中的 name 字段一致
+name = "api-check"
+
+# Worker 的主入口文件，包含 Worker 的核心逻辑
+main = "src/index.js"
+
+# 兼容性日期，用于确保 Worker 行为与特定日期后的运行时行为兼容
+compatibility_date = "2026-01-01"
+
+# 静态资源配置，指向前端构建后的输出目录
+[assets]
+directory = "./frontend/dist"
+
+# 可观测性配置，用于 Workers Insights 和日志
+# [observability]
+# enabled = true # 启用可观测性
+# head_sampling_rate = 1 # 日志采样率，1 表示 100% 采样
+
+# Durable Objects 绑定配置
+# REGIONAL_FETCHER 是一个 Durable Object，用于实现区域性请求代理
+[[durable_objects.bindings]]
+name = "REGIONAL_FETCHER" # 绑定名称，在 Worker 代码中通过 env.REGIONAL_FETCHER 访问
+class_name = "RegionalFetcher" # 对应的 Durable Object 类名
+
+[[durable_objects.bindings]]
+name = "REQUEST_RATE_LIMITER"
+class_name = "RequestRateLimiter"
+
+# 数据库迁移配置，用于 Durable Object 的存储
+[[migrations]]
+tag = "v1" # 迁移标签
+new_sqlite_classes = ["RegionalFetcher"] # 声明新的 Durable Object 类，需要 SQLite 存储
+
+[[migrations]]
+tag = "v2"
+new_sqlite_classes = ["RequestRateLimiter"]
+
+# 环境变量配置
+[vars]
+# 本地部署默认值；GitHub Actions 部署时由 Repository Variable ALLOWED_ORIGINS 覆盖。
+# 同源部署保持空数组；不要使用公共托管域的宽泛通配符。
+ALLOWED_ORIGINS = "[]"
+# 单个客户端 IP 在时间窗口内最多允许检测的 Token 数量（默认一小时 60,000 个）。
+MAX_TOKENS_PER_IP_PER_WINDOW = "60000"
+TOKEN_RATE_WINDOW_MS = "3600000"
+# 模型列表接口使用独立的集中限流桶。
+MAX_MODELS_REQUESTS_PER_IP_PER_WINDOW = "30"
+MODELS_RATE_WINDOW_MS = "60000"
+# 是否启用 User-Agent 随机化，用于模拟不同客户端，默认为 "true"
+ENABLE_UA_RANDOMIZATION = "true"
+# 是否启用 Accept-Language 随机化，用于模拟不同语言偏好，默认为 "true"
+ENABLE_ACCEPT_LANGUAGE_RANDOMIZATION = "true"

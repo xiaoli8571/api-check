@@ -1,0 +1,29 @@
+{
+  "name": "api-check",
+  "version": "2.0.3",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.10.0"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "npm run test && npm run build",
+    "dev": "vite",
+    "dev:wrangler": "wrangler dev",
+    "dev:full": "npm run build && wrangler dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "dependencies": {
+    "pinia": "^2.1.7",
+    "vue": "^3.4.21",
+    "vue-virtual-scroller": "^2.0.0-beta.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.0",
+    "wrangler": "^4.30.0"
+  }
+}

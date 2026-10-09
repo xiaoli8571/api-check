@@ -1,0 +1,177 @@
+{
+  "aihubmix": {
+    "label": "Aihubmix",
+    "icon": "🐢",
+    "hasBalance": false,
+    "apiStyle": "openai_responses",
+    "defaultBase": "https://aihubmix.com/v1",
+    "defaultModel": "gpt-5.6-luna",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "deerapi": {
+    "label": "Deerapi",
+    "icon": "🦌",
+    "hasBalance": false,
+    "apiStyle": "openai",
+    "defaultBase": "https://api.deerapi.com/v1",
+    "defaultModel": "gpt-4o-mini",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "dmxapi": {
+    "label": "Dmxapi",
+    "icon": "👓",
+    "hasBalance": false,
+    "apiStyle": "openai",
+    "defaultBase": "https://www.dmxapi.cn/v1",
+    "defaultModel": "gpt-4o-mini",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "deepseek": {
+    "label": "DeepSeek",
+    "icon": "🔍",
+    "hasBalance": true,
+    "apiStyle": "openai",
+    "defaultBase": "https://api.deepseek.com/v1",
+    "defaultModel": "deepseek-v4-flash",
+    "balanceCheck": "checkDeepSeekBalance",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "nvidia": {
+    "label": "Nvidia",
+    "icon": "🔥",
+    "hasBalance": false,
+    "apiStyle": "openai",
+    "defaultBase": "https://integrate.api.nvidia.com/v1",
+    "defaultModel": "openai/gpt-oss-120b",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "jeniya": {
+    "label": "Jeniya",
+    "icon": "🦢",
+    "hasBalance": false,
+    "apiStyle": "openai",
+    "defaultBase": "https://jeniya.top/v1",
+    "defaultModel": "gpt-4o-mini",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "github": {
+    "label": "GitHub Models",
+    "icon": "🐙",
+    "hasBalance": false,
+    "apiStyle": "openai",
+    "defaultBase": "https://models.github.ai/inference",
+    "defaultModel": "openai/gpt-4o-mini",
+    "fetchModels": "fetchGitHubModels"
+  },
+  "groq": {
+    "label": "Groq",
+    "icon": "🐱",
+    "hasBalance": false,
+    "apiStyle": "openai",
+    "defaultBase": "https://api.groq.com/openai/v1",
+    "defaultModel": "openai/gpt-oss-20b",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "modelscope": {
+    "label": "Modelscope",
+    "icon": "🍄",
+    "hasBalance": false,
+    "apiStyle": "openai",
+    "defaultBase": "https://api-inference.modelscope.cn/v1",
+    "defaultModel": "ZhipuAI/GLM-5",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "moonshot": {
+    "label": "Moonshot",
+    "icon": "🌙",
+    "hasBalance": true,
+    "apiStyle": "openai",
+    "defaultBase": "https://api.moonshot.cn/v1",
+    "defaultModel": "kimi-latest",
+    "balanceCheck": "checkMoonshotBalance",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "newapi": {
+    "label": "New API",
+    "icon": "🌟",
+    "hasBalance": true,
+    "apiStyle": "openai",
+    "defaultBase": "https://your.newapi.server/v1",
+    "defaultModel": "gpt-4o-mini",
+    "balanceCheck": "checkNewAPIBalance",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "openrouter": {
+    "label": "OpenRouter",
+    "icon": "🌐",
+    "hasBalance": true,
+    "apiStyle": "openai",
+    "defaultBase": "https://openrouter.ai/api/v1",
+    "defaultModel": "mistralai/mistral-7b-instruct:free",
+    "balanceCheck": "checkOpenRouterBalance",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "poe": {
+    "label": "Poe",
+    "icon": "🐧",
+    "hasBalance": false,
+    "apiStyle": "openai",
+    "defaultBase": "https://api.poe.com/v1",
+    "defaultModel": "GPT-OSS-20B",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "pplx": {
+    "label": "Perplexity",
+    "icon": "🍀",
+    "hasBalance": false,
+    "apiStyle": "openai",
+    "defaultBase": "https://api.perplexity.ai",
+    "defaultModel": "sonar",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "qwen": {
+    "label": "Qwen",
+    "icon": "☁️",
+    "hasBalance": false,
+    "apiStyle": "openai",
+    "defaultBase": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "defaultModel": "qwen-turbo",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "siliconflow": {
+    "label": "SiliconFlow",
+    "icon": "💧",
+    "hasBalance": true,
+    "apiStyle": "openai",
+    "defaultBase": "https://api.siliconflow.cn/v1",
+    "defaultModel": "Qwen/Qwen2.5-7B-Instruct",
+    "balanceCheck": "checkSiliconFlowBalance",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "xai": {
+    "label": "xAI",
+    "icon": "🚀",
+    "hasBalance": false,
+    "apiStyle": "openai",
+    "defaultBase": "https://api.x.ai/v1",
+    "defaultModel": "grok-4.20-0309-non-reasoning",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "zhipu": {
+    "label": "Zhipu",
+    "icon": "〽️",
+    "hasBalance": false,
+    "apiStyle": "openai",
+    "defaultBase": "https://open.bigmodel.cn/api/paas/v4",
+    "defaultModel": "glm-4.7-flash",
+    "fetchModels": "fetchOpenAIModels"
+  },
+  "tavily": {
+    "label": "Tavily",
+    "icon": "🌐",
+    "hasBalance": false,
+    "apiStyle": "tavily",
+    "defaultBase": "https://api.tavily.com",
+    "defaultModel": ""
+  }
+}
